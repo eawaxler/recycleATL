@@ -20,7 +20,7 @@ body, html {
   cursor: pointer;
   cursor: pointer;
   padding: 2vw 0vmin;
-  margin-bottom: 5vh;
+  margin: 2vh 0 5vh 0;
   font-size: 2.8vw;
   width: 20vw;
   white-space: nowrap;
