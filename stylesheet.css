@@ -29,6 +29,7 @@ body, html {
 .recycle {
   margin-top: 10vmin;
   width: 20vw;
+  margin: 2vh auto;
   padding-bottom: 2vh;
 }
 
