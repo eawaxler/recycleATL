@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {box-sizing: border-box}
+
+body, html {
+  margin: 0;
+  padding-bottom: 20;
+  font-family: "Nunito"; 
+}
+
+/* Style tab links */
+.tablink {
+  color: #028174;
+  border-radius: 0;
+  background-color: #ffe3b3;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 26px;
+  width: 20%;
+}
+
+.recycle {
+	margin-left: 40%;
+	margin-top: 50px;
+	width: 20%
+}
+
+.tablink:hover {
+  background-color: #92de8b;
+}
+
+.tabcontent {
+  color: #028174;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#Definition {background-color: #028174;}
+#Exploration {background-color: #0ab68b;}
+#Iteration {background-color: #92de8b;}
+#FinalProduct {background-color: #028174;}
+	
