@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>recycleATL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.google.com/specimen/Nunito#standard-styles">
 <style>
 * {box-sizing: border-box}
 
@@ -11,12 +9,12 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: "Nunito";
+  font-family: Arial;
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #0ab68b;
+  background-color: #555;
   color: white;
   float: left;
   border: none;
@@ -28,7 +26,7 @@ body, html {
 }
 
 .tablink:hover {
-  background-color: #92de8b;
+  background-color: #777;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -41,25 +39,24 @@ body, html {
 
 #Home {background-color: #0ab68b;}
 #Definition {background-color: #028174;}
-#Exploration {background-color: #0ab68b;}
-#Iteration {background-color: #92de8b;}
-#Final Product {background-color: #0ab68b;}
+#Iteration {background-color: blue;}
+#Exploration {background-color: orange;}
+#Final Product {background-color: orange;}
 	
 </style>
-	
 </head>
 <body>
 
 <button class="tablink" onclick="openPage('Home', this, '#0ab68b')">Home</button>
 <button class="tablink" onclick="openPage('Definition', this, '#028174')" id="defaultOpen">Definition</button>
-<button class="tablink" onclick="openPage('Exploration', this, '#0ab68b')">Exploration</button>
-<button class="tablink" onclick="openPage('Iteration', this, '#92de8b')">Iteration</button>
-<button class="tablink" onclick="openPage('Final Product', this, '#0ab68b')">Final Product</button>
+<button class="tablink" onclick="openPage('Iteration', this, 'blue')">Iteration</button>
+<button class="tablink" onclick="openPage('Exploration', this, 'orange')">Exploration</button>
+<button class="tablink" onclick="openPage('Final Product', this, 'orange')">Final Product</button>
 
 	
 <div id="Home" class="tabcontent">
-  	<embed src="1.svg">
-	<embed src="2.svg">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
 </div>
 
 <div id="Definition" class="tabcontent">
@@ -67,36 +64,22 @@ body, html {
 	<embed src="5.svg">
 	<embed src="6.svg">
 	<embed src="7.svg">
-	<embed src="8.svg">
-</div>	
-
-<div id="Exploration" class="tabcontent">
-	<embed src="9.svg">
-	<embed src="10.svg">
-	<embed src="11.svg">
-	<embed src="12.svg">
-	<embed src="13.svg">	
-	<embed src="14.svg">
-	<embed src="15.svg">	
+	<embed src="8.svg">	v
 </div>
 	
 <div id="Iteration" class="tabcontent">
-	<embed src="16.svg">
-	<embed src="17.svg">
-	<embed src="18.svg">
-	<embed src="19.svg">
-	<embed src="20.svg">	
-	<embed src="21.svg">
-	<embed src="22.svg">	
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Exploration" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
 </div>
 
 <div id="Final Product" class="tabcontent">
-	<embed src="23.svg">
-	<embed src="24.svg">
-	<embed src="25.svg">
-	<embed src="26.svg">
-	<embed src="27.svg">	
-	<embed src="28.svg">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
 </div>
 
 <script>
@@ -109,8 +92,6 @@ function openPage(pageName,elmnt,color) {
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
-	tablinks[i].style.color = "white";
-	  
   }
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
