@@ -15,15 +15,16 @@ body, html {
   background-color: #ffe3b3;
   display: inline-block;
   float: left;
-  border: none;
   outline: none;
   cursor: pointer;
   cursor: pointer;
   padding: 2vw 0vmin;
-  margin: 2vh 0 5vh 0;
+  margin: .5vh 0 2vh 0;
   font-size: 2.8vw;
   width: 20vw;
   white-space: nowrap;
+  border-style: solid; 
+  border-color: white;
 }
 
 .recycle {
@@ -39,7 +40,7 @@ body, html {
 .tabcontent {
   color: #028174;
   display: none;
-  padding: 5vmin 7vmin;
+  padding: 8vw 3vw 2vw;
   margin-bottom: 0;
   height: 100%;
 }
