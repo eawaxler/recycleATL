@@ -9,22 +9,30 @@
 
 /* Set height of body and the document to 100% */
 body, html {
-  height: 100%;
   margin: 0;
-  font-family: "Nunito";
+  padding-bottom: 20;
+  font-family: "Nunito"; 
 }
 
 /* Style tab links */
 .tablink {
-  background-color: #0ab68b;
-  color: white;
+  color: #028174;
+  border-radius: 0;
+  background-color: #ffe3b3;
   float: left;
   border: none;
   outline: none;
   cursor: pointer;
+  cursor: pointer;
   padding: 14px 16px;
-  font-size: 17px;
+  font-size: 26px;
   width: 20%;
+}
+
+.recycle {
+	margin-left: 40%;
+	margin-top: 50px;
+	width: 20%
 }
 
 .tablink:hover {
@@ -33,91 +41,102 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: white;
+  color: #028174;
   display: none;
   padding: 100px 20px;
   height: 100%;
 }
 
-#Home {background-color: #0ab68b;}
+#Home {background-color: white;}
 #Definition {background-color: #028174;}
 #Exploration {background-color: #0ab68b;}
 #Iteration {background-color: #92de8b;}
-#Final Product {background-color: #0ab68b;}
+#FinalProduct {background-color: #028174;}
 	
 </style>
 	
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('Home', this, '#0ab68b')">Home</button>
-<button class="tablink" onclick="openPage('Definition', this, '#028174')" id="defaultOpen">Definition</button>
-<button class="tablink" onclick="openPage('Exploration', this, '#0ab68b')">Exploration</button>
-<button class="tablink" onclick="openPage('Iteration', this, '#92de8b')">Iteration</button>
-<button class="tablink" onclick="openPage('Final Product', this, '#0ab68b')">Final Product</button>
+<button class="tablink" onclick="openPage('Home', this, 'white', '#028174')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Definition', this, '#028174', '#ffe3b3')">Definition</button>
+<button class="tablink" onclick="openPage('Exploration', this, '#0ab68b', '#ffe3b3')">Exploration</button>
+<button class="tablink" onclick="openPage('Iteration', this, '#92de8b', 'white')">Iteration</button>
+<button class="tablink" onclick="openPage('FinalProduct', this, '#028174', '#ffe3b3')">Final Product</button>
 
 	
 <div id="Home" class="tabcontent">
-  	<embed src="1.svg">
-	<embed src="2.svg">
+  	<embed src="svgs/1.svg">
+	<embed src="svgs/2.svg">
+	<embed src="svgs/greenRecycle.svg" class="recycle">
 </div>
 
 <div id="Definition" class="tabcontent">
-  	<embed src="4.svg">
-	<embed src="5.svg">
-	<embed src="6.svg">
-	<embed src="7.svg">
-	<embed src="8.svg">
+  	<embed src="svgs/4.svg">
+	<embed src="svgs/5.svg">
+	<embed src="svgs/6.svg">
+	<embed src="svgs/7.svg">
+	<embed src="svgs/8.svg">
+	<embed src="svgs/whiteRecycle.svg" class="recycle">
+		
 </div>	
 
 <div id="Exploration" class="tabcontent">
-	<embed src="9.svg">
-	<embed src="10.svg">
-	<embed src="11.svg">
-	<embed src="12.svg">
-	<embed src="13.svg">	
-	<embed src="14.svg">
-	<embed src="15.svg">	
+	<embed src="svgs/9.svg">
+	<embed src="svgs/10.svg">
+	<embed src="svgs/11.svg">
+	<embed src="svgs/12.svg">
+	<embed src="svgs/13.svg">	
+	<embed src="svgs/14.svg">
+	<embed src="svgs/15.svg">
+	<embed src="svgs/whiteRecycle.svg" class="recycle">
 </div>
 	
 <div id="Iteration" class="tabcontent">
-	<embed src="16.svg">
-	<embed src="17.svg">
-	<embed src="18.svg">
-	<embed src="19.svg">
-	<embed src="20.svg">	
-	<embed src="21.svg">
-	<embed src="22.svg">	
+	<embed src="svgs/16.svg">
+	<embed src="svgs/17.svg">
+	<embed src="svgs/18.svg">
+	<embed src="svgs/19.svg">
+	<embed src="svgs/20.svg">	
+	<embed src="svgs/21.svg">
+	<embed src="svgs/22.svg">
+	<embed src="svgs/whiteRecycle.svg" class="recycle">
 </div>
 
-<div id="Final Product" class="tabcontent">
-	<embed src="23.svg">
-	<embed src="24.svg">
-	<embed src="25.svg">
-	<embed src="26.svg">
-	<embed src="27.svg">	
-	<embed src="28.svg">
+<div id="FinalProduct" class="tabcontent">
+	<embed src="svgs/23.svg">
+	<embed src="svgs/24.svg">
+	<embed src="svgs/25.svg">
+	<embed src="svgs/26.svg">
+	<embed src="svgs/27.svg">	
+	<embed src="svgs/28.svg">
+	<embed src="svgs/whiteRecycle.svg" class="recycle">
 </div>
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-	tablinks[i].style.color = "white";
-	  
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
+	<script>
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+	function openPage(pageName,elmnt,color, fontColor) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < 5; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablink");
+	  for (i = 0; i < 5; i++) {
+		tablinks[i].style.backgroundColor = "";
+		tablinks[i].style.color = "";
+	  }
+	  document.getElementById(pageName).style.display = "block";
+	  elmnt.style.backgroundColor = color;
+	  elmnt.style.color = fontColor;
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+
+	 $(document).ready(function(){
+		$(window).scrollTop(0);
+	});
 </script>
-   
 </body>
+</html>
