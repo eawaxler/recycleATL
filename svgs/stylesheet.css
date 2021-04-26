@@ -5,7 +5,8 @@
 
 body, html {
   margin: 0;
-  padding-bottom: 20vw;
+  padding-bottom: 20vmin;
+  font-size: 26vmin;
   font-family: "Nunito"; 
 }
 
@@ -19,14 +20,14 @@ body, html {
   outline: none;
   cursor: pointer;
   cursor: pointer;
-  padding: 14vw 16vw;
-  font-size: 26vw;
+  padding: 14vmin 16vmin;
+  max-height: 0vmin;
   width: 20%;
 }
 
 .recycle {
   margin-left: 40%;
-  margin-top: 50vw;
+  margin-top: 50vmin;
   width: 20%;
 }
 
@@ -37,7 +38,7 @@ body, html {
 .tabcontent {
   color: #028174;
   display: none;
-  padding: 100vw 20vw;
+  padding: 100vmin 20vmin;
   height: 100%;
 }
 
