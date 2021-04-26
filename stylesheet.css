@@ -50,4 +50,24 @@ body, html {
 #Exploration {background-color: #0ab68b;}
 #Iteration {background-color: #92de8b;}
 #FinalProduct {background-color: #028174;}
+
+#homeTab:hover {
+  background-color: white;
+}
+#definitionTab:hover {
+  background-color: #028174;
+  color: white;
+}
+#explorationTab:hover {
+  background-color: #0ab68b; 
+  color: white;
+}
+#iterationTab:hover {
+  background-color: #92de8b;
+  color: white;
+}
+#finalProductTab:hover {
+  background-color: #028174;
+  color: white;
+}
 	
